@@ -3,16 +3,16 @@ As a part of my first co-op work term I was able to aid in the redevelopment of 
 These components follow WCAG 2.1 requirements and ensure interactivity for students. These were designed using figma, and built using HTML, CSS, Javascript, and Bootstrap.
 
 # Component Wireframes
-Typography
+Typography<br/>
 <img width="448" alt="Screenshot 2023-05-09 at 6 17 54 PM" src="https://github.com/kriishnaPat/PD11Redevelopment/assets/77902389/7d8172e1-c893-4145-bc72-b6ac7466996b">
 
-Buttons
+Buttons<br/>
 <img width="201" alt="Screenshot 2023-05-09 at 6 18 17 PM" src="https://github.com/kriishnaPat/PD11Redevelopment/assets/77902389/28aecbd8-3a75-4cdd-b534-3aedcc84d793">
 
-Carousels
+Carousels<br/>
 <img width="306" alt="Screenshot 2023-05-09 at 6 18 33 PM" src="https://github.com/kriishnaPat/PD11Redevelopment/assets/77902389/a60627fd-f6d3-4b54-9997-6870c1bfc13c">
 
-Cards
+Cards<br/>
 <img width="480" alt="Screenshot 2023-05-09 at 6 18 58 PM" src="https://github.com/kriishnaPat/PD11Redevelopment/assets/77902389/db3a051a-f98e-4b6d-84f0-b2cdf5bba224">
 
 Callouts
