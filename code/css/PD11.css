@@ -1,0 +1,700 @@
+:root {
+    /* COLOURS */
+    --blue4: #32465C;
+    /* Dark Blue: Accessible background and blue0, blue1 */
+    --blue3: #3D556F;
+    /* Primary Blue: Accessible background */
+    --blue2: #6E8093;
+    /* Light Blue: NOT ACCESSIBILE COMBO - use for icons, decorations, or hover effects only */
+    --blue1: #CFD5DB;
+    /* Lighter Blue: Accessible with blue4 and font */
+    --blue0: #E7EAED;
+    /*Light gray: Accordion background*/
+    --accordion1: #dededf;
+    /* Lightest Blue: Accessible with blue4 and font */
+    --font: #222222;
+    /* font off gray: Accessible background and blue0, blue1 */
+    --background: #F5F5F5;
+    /* background off white: Accessible with blue4, blue3, and font */
+    --pen: #0039a6;
+    /* use to represent pen ink */
+    
+    /* Faculty Colors */
+    /* Accessible with  light font */
+    --engineering: #8100B4;
+    /* Accessible with dark font */
+    --math: #DF2498;
+    /* Accessible with dark and light font */
+    --science: #0073CE;
+    
+    --highlight: rgba(254, 239, 56, 70);
+    /* use to represent highkighter ink */
+    /* SHADOWS */
+    --paper1: 0 4px 4px rgba(0, 0, 0, 0.2);
+    --paper2: -4px 4px 2px rgba(0, 0, 0, 0.5);
+    --paper3: 0 -2px 3px rgba(0, 0, 0, 0.2);
+    --paper4: 0 -2px 3px rgba(0, 0, 0, 0.2), 0 2px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* TYPOGRAPHY & PAGE */
+  .container-fluid {
+    background: var(--background);
+    box-shadow: var(--paper1);
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--font);
+    margin: 1em;
+    font-size: calc(1rem + .3vw);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  h1,
+  h3,
+  h5,
+  h3.accordion-header .accordion-button,
+  h5.accordion-header .accordion-button {
+    color: var(--blue3);
+  }
+  
+  h2,
+  h4,
+  h6,
+  h4.accordion-header .accordion-button,
+  h6.accordion-header .accordion-button {
+    color: var(--blue4);
+  }
+  
+  h1,
+  h3 {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: calc(1.625rem + 2.5vw);
+    border-top: 0.4em solid var(--blue3);
+    border-bottom: 0.4em solid var(--blue3);
+    padding: 0.5em;
+  }
+  
+  h1 i {
+    font-size: calc(1.475rem + 2vw);
+  }
+  
+  h2 {
+    font-size: calc(1.525rem + 1.8vw);
+    box-shadow: var(--paper3);
+    padding: 0.3em 0px;
+    margin: 0.5em 0px;
+  }
+  
+  .indexSticky {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 4.4em;
+    height: 1.3em;
+    right: 0.4em;
+    background: var(--blue4);
+    clip-path: polygon(0% 0%, 78% 0%, 100% 50%, 78% 100%, 0% 100%);
+  }
+  
+  .stickyWrap {
+    filter: drop-shadow(var(--paper2));
+  }
+  
+  h3,
+  h3.accordion-header .accordion-button {
+    font-size: calc(1.425rem + 1vw);
+  }
+  
+  h3 span {
+    display: inline-block;
+    position: relative;
+  }
+  
+  h3 span:before,
+  h3 span:after {
+    content: "";
+    position: absolute;
+    height: 0.5em;
+    background: var(--blue1);
+    top: 0.4em;
+    width: calc(25vw - 1em);
+    /* should this be calculated with JS to be dynamic based on heading size and viewport size? */
+  }
+  
+  h3 span:before {
+    right: 100%;
+    margin-right: 15px;
+  }
+  
+  h3 span:after {
+    left: 100%;
+    margin-left: 15px;
+  }
+  
+  h3,
+  h4,
+  h3.accordion-header .accordion-button,
+  h4.accordion-header .accordion-button {
+    font-weight: 700;
+  }
+  
+  h4,
+  h4.accordion-header .accordion-button {
+    font-size: calc(1.475rem + 0.6vw);
+  }
+  
+  h5,
+  h5.accordion-header .accordion-button {
+    font-size: calc(1.375rem + 0.3vw);
+  }
+  
+  h6,
+  h6.accordion-header .accordion-button {
+    font-size: 1.3rem;
+  }
+  
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.5em 0px;
+  }
+  
+  .mark,
+  mark {
+    background-color: var(--highlight);
+  }
+  
+  .instruction {
+    background: white;
+    padding: 1em;
+    color: #4d4d4d;
+    font-weight: 300;
+    font-size: calc(0.8rem + .2vw);
+  }
+  
+  .accordionGeneral,
+  .activity-box,
+  .card,
+  .carousel,
+  .video,
+  .list-group,
+  .statement,
+  .slider,
+  .table,
+  .tabs,
+  .timeline {
+    margin: 1em 0px 2em;
+  }
+  
+  .quesNum {
+    font-family: 'Indie Flower', cursive;
+    color: var(--pen);
+  }
+  
+  .question {
+    font-size: calc(1.1rem + 1vw);
+  }
+  
+  /* BUTTONS */
+  .btn{
+    border-radius: 0px;
+    padding: 10px 30px;
+    margin: 0.5em;
+    box-shadow: var(--paper1);
+    text-align: start;
+    position: relative;
+    background: var(--blue4);
+    transition: all ease .5s;
+    color: var(--background);
+  }
+  
+  .btn:before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: var(--blue1) var(--background);
+    transition: all ease .5s;
+  }
+  
+  .btn:hover{
+    background: var(--blue4);
+    color: var(--background);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    outline:none;
+  }
+  
+  .btn:hover:before{
+    border-width: 25px 25px 0 0;
+    border-color: var(--blue1) var(--background);
+  }
+  
+  .btn i{
+    position: relative;
+    left: -15px;
+    margin-right: 15px;
+  }
+  
+  .btn i::after{
+    content: "";
+    border-right: 1px solid var(--background);
+    margin-left: 15px;
+    height: calc(100% + 29px);
+    position: absolute;
+    top: -14px;
+  }
+  
+  .btn.light{
+    background-color: var(--blue1);
+    color: var(--blue4);
+  }
+  
+  .btn.light:before{
+    border-color: var(--blue4) var(--background);
+  }
+  
+  .btn.light:hover{
+    background: var(--blue1);
+    color: var(--blue4);
+  }
+  
+  .btn.light:hover:before{
+    border-color: var(--blue4) var(--background);
+  }
+  
+  .btn.light i::after{
+    border-right: 1px solid var(--blue4);
+  }
+  
+  .btn-check:focus+.btn,   
+  .btn:focus,
+  .btn-check:active+.btn,
+  .btn-check:checked+.btn,
+  .btn.active,
+  .btn.show,
+  .btn:active {
+    background: var(--blue3);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border: 1px solid white;
+    outline: 2px solid var(--blue3);
+  }
+  
+  .btn.light-check:focus+.btn.light,
+  .btn.light:focus,
+  .btn.light-check:active+.btn.light,
+  .btn.light-check:checked+.btn.light,
+  .btn.light.active,
+  .btn.light.show,
+  .btn.light:active {
+    background: var(--blue2);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border: 1px solid white;
+    outline: 2px solid var(--blue2);
+  } 
+  
+  /* FLIP CARDS */
+  .flipCard-spiral {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .flipCard-binding {
+    height: 2em;
+    width: 2.4em;
+    position: relative;
+    top: -5px;
+  }
+  
+  .flipCard-binding::before {
+    content: "";
+    height: 50%;
+    width: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+  }
+  
+  .flipCard-binds {
+    width: 65%;
+    height: 10px;
+    position: absolute;
+    top: 35%;
+    right: 50%;
+    transform: translateY(-100%) translateX(50%) rotate(90deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .flipCard-bind {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, rgba(80, 80, 80, 1) 0%, rgb(179, 178, 178), rgba(80, 80, 80, 1) 100%);
+    border-radius: 100px;
+  }
+  
+  .flipCard {
+    perspective: 900;
+    -webkit-perspective: 900;
+    -ms-perspective: 900;
+    -moz-perspective: 900;
+    -o-perspective: 900;
+    cursor: pointer;
+  }
+  
+  .card-flip .side:not(.back),
+  .card-flip.flipped .side:not(.back) {
+    z-index: 9;
+    background: var(--blue1);
+    background-image: repeating-linear-gradient(var(--blue1) 2px, var(--blue1) 30px, steelblue 31px);
+  }
+  
+  .card-flip,
+  .flipCard:focus .card-flip .side:not(.back) {
+    background-image: repeating-linear-gradient(var(--blue1) 2px, var(--blue1) 30px, steelblue 31px);
+    text-align: center; 
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  /* text on the insdie and front */
+  .card-flip .side {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    color: var(--blue4);
+    padding: 4em 1em 1em 1em;
+  }
+  
+  /* inside background */
+  .card-flip .side.back {
+    background: var(--blue1);
+  }
+  
+  .card-flipContent {
+    margin-bottom: 1em;
+  }
+  
+  .card-flip .side,
+  .card-flip .short {
+    width: 100%;
+  }
+  
+  .flipCard,
+  .card-flip,
+  .card-flip .side,
+  .card-flip .short,
+  .card-flipContent {
+    height: 100%;
+  }
+  
+  .card-flip .long{
+    position: relative;
+  }
+  
+  /* front cover fold effect */
+  .card-flip .side:not(.back)::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 4;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: var(--blue1) var(--background);
+    transition: all ease .5s;
+  }
+  
+  /* also front cover fold effect */
+  .card-flip .side:not(.back):hover::after {
+    border-width: 35px 35px 0 0;
+    border-color: var(--blue4) var(--background);
+  }
+  
+  /* also front cover fold effect */
+  .card-flip.flipped .side:not(.back):hover::after,
+  .flipCard:focus .card-flip .side:not(.back):hover::after {
+    border-width: 0;
+    border-color: var(--blue1);
+  }
+  
+  .card-flip .short,
+  .card-flip .side:hover::after {
+    position: absolute;
+  }
+  
+  .card-flip .short {
+    top: 0;
+    left: 0;
+  }
+  
+  .card-flipContent {
+    display: -webkit-box;
+    -webkit-box-align: stretch;
+    -webkit-box-pack: center;
+    -webkit-box-orient: vertical;
+  }
+  
+  .flipCard_img {
+    width: 16em;
+  }
+  
+  /* what happens when the card is flipped and the top page flips that top pages effects */
+  .flipCard:focus .card-flip .side:not(.back) {
+    transform: rotateX(78deg);
+    -ms-transform: rotateX(78deg);
+    /* IE 9 */
+    -moz-transform: rotateX(78deg);
+    /* Firefox */
+    -webkit-transform: rotateX(78deg);
+    /* Safari and Chrome */
+    -o-transform: rotateX(78deg);
+    /* Opera */
+    background-image: repeating-linear-gradient(var(--blue1) 2px, var(--blue1) 30px, steelblue 31px);
+    position: absolute;
+    top: calc(-50% + 2em);
+  }
+  
+  .card-flip .side {
+    backface-visibility: hidden;
+    /* W3C */
+    -webkit-backface-visibility: hidden;
+    /* Safari & Chrome */
+    -moz-backface-visibility: hidden;
+    /* Firefox */
+    -ms-backface-visibility: hidden;
+    /* Internet Explorer */
+    -o-backface-visibility: hidden;
+    /* Opera */
+  }
+  
+  .card-flip .side,
+  .card-flip .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  /* GRIDS */
+  .grid{
+    position: relative;
+    background-color: #FFFFFF;
+    padding: 2.5em;
+    margin: 1.5em 0.75em;
+    box-shadow: var(--paper1);
+    -webkit-box-shadow: 0px 4px 4px rgba(0,0,0,0.2); 
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+  }
+  
+  .grid.rotateLeft{
+      transform: rotate(-1deg);
+  }
+  
+  .grid.rotateRight{
+    transform: rotate(1deg);
+    background-color: var(--blue0);
+  }
+  
+  .grid-content-r{
+    transform: rotate(-1deg);
+  }
+  
+  .grid-content-l{
+    transform: rotate(1deg);
+  }
+  
+  .tape{
+    position: absolute;
+    background-color: hsla(190, 5%, 76%, 0.69);
+    box-shadow: inset 0 0 1em .5em hsla(190, 5%, 76%, 0.69);
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100px;
+    transform: rotate(1deg);
+    max-width: 180px;
+    left: 0;
+    right: 0;
+  }
+  
+  .tape.above{
+    height: 2.5em;
+    top: -16px;
+    bottom: -16px;
+  }
+  
+  .tape.bottom{
+    height: 3em;
+    bottom: -22px;
+  }
+  
+  .tape:after,
+  .tape:before{
+    background-size: .3em .3em;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: .2em;
+  }
+  
+  .tape:after{
+    background-image: linear-gradient(45deg, transparent 50%, hsla(190, 5%, 76%, 0.69) 50%),
+                      linear-gradient(-45deg, transparent 50%, hsla(190, 5%, 76%, 0.69) 50%);
+    background-position: 0 100%;
+    left: -.2em;
+  }
+  
+  .tape:before{
+    background-image: linear-gradient(135deg, transparent 50%, hsla(190, 5%, 76%, 0.69) 50%),
+                      linear-gradient(-135deg, transparent 50%, hsla(190, 5%, 76%, 0.69) 50%);
+    background-position: 100% 100%;
+    right: -.2em;
+  }
+  
+  /* NOTE BLOCKS */
+  .noteblock{ 
+    position:relative;
+    margin: 0.5em 0.1em;
+  }
+  
+  .noteblock_body{
+    padding: 3.5em 2em;
+  }
+  
+  .noteblock.dark{
+    background: var(--blue4);
+    color: var(--blue0);
+  }
+  
+  .noteblock_header{
+    padding: 0.1em;
+    margin:0;
+  }
+  
+  .noteblock_header.dark{
+    background: var(--blue4);
+  }
+  
+  .noteblock_header.light{
+    background: var(--blue1);
+  }
+  
+  .header_text.light{
+    color: var(--blue4);
+  }
+  
+  .header_text.dark{
+    color: var(--blue0);
+  }
+  
+  .noteblock.light, .noteblock.topLeftFold{
+    background: var(--blue1);
+    color: var(--blue4);
+  }
+  
+  .noteblock:before {
+    content: "";
+    position: absolute;
+    bottom: 0em;
+    right: 0em;
+    border-width: 3.5em 3.5em 0 0;
+    border-style: solid;
+  }
+  
+  .noteblock.topLeftFold:before{
+    top: 0;
+    left: 0;
+    bottom: 100%;
+    right: 100%;  
+    border-width: 3.5em 3.5em 0 0;
+    border-color: var(--background) var(--blue3);
+  }
+  
+  .noteblock.light:before {
+    border-color: var(--blue4) var(--background);
+  }
+  
+  .noteblock.dark:before {
+    border-color: var(--blue1) var(--background);
+  }
+  
+  .corner-icon{
+    position:absolute;
+    top:2em;
+    left:2em;
+    color: var(--blue1);
+  }
+  
+  .noteblock.background_lines{
+    background-image: linear-gradient(var(--blue3) 1px, transparent 0px);
+    background-size: 100% 2em;
+    background-position-y: 2.5rem;
+    line-height: 2em;
+  }
+  
+  .btn.activity-box-noteblock:before{
+    border-color: var(--blue0) var(--blue4);
+  }
+  
+  .btn.activity-box-noteblock:hover{
+    background: var(--blue1);
+    color: var(--blue4);
+  }
+  
+  .btn.activity-box-noteblock:hover:before{
+    border-width: 15px 15px 0 0;
+    border-color: var(--blue0) var(--blue4);
+  }
+  /* STATEMENT BLOCKS */
+  .statement {
+    position: relative;
+    text-align: center;
+  }
+  
+  .statement img{
+    width:100%;
+    height: 300px;
+  }
+  
+  .statement-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:80%;
+    transform: translate(-50%, -50%);
+    font-size: calc(1rem + 0.8vw)
+  }
+  
